@@ -1,0 +1,4 @@
+# Old tuner-music.com (Squarespace) deep links, in case the domain is later
+# aliased to this Netlify site — send them somewhere sensible.
+/reelpage   /#work      301
+/contact    /#contact   301
