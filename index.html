@@ -3,23 +3,53 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
     <title>Tuner Entertainment</title>
     <meta name="description" content="Tuner Entertainment is a New York producing company building new work for the stage. Led by Charley Raiff." />
+    <link rel="canonical" href="https://tunerentertainment.com/" />
+    <meta name="theme-color" content="#FAF7F0" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <!-- Social / share preview -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Tuner Entertainment" />
     <meta property="og:title" content="Tuner Entertainment" />
     <meta property="og:description" content="A New York producing company building new work for the stage. Led by Charley Raiff." />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:url" content="https://tunerentertainment.com/" />
+    <meta property="og:image" content="https://tunerentertainment.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Tuner Entertainment — a New York producing company building new work for the stage" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Tuner Entertainment" />
     <meta name="twitter:description" content="A New York producing company building new work for the stage. Led by Charley Raiff." />
+    <meta name="twitter:image" content="https://tunerentertainment.com/og-image.png" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Tuner Entertainment",
+      "url": "https://tunerentertainment.com/",
+      "description": "A New York producing company building new work for the stage.",
+      "email": "charley@tunerentertainment.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Charley Raiff",
+        "jobTitle": "Writer, Composer, Producer"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "addressCountry": "US"
+      }
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -78,11 +108,22 @@
           <h2 class="work__title">
             <a
               class="work__logo-link"
-              href="https://luxuryproblemsmusical.com"
+              href="https://www.luxuryproblemsmusical.com"
               rel="noopener"
               aria-label="Luxury Problems — visit luxuryproblemsmusical.com"
             >
-              <img src="assets/lp-logo-framed.png" alt="Luxury Problems — A New Musical" class="work__logo" />
+              <picture>
+                <source srcset="assets/lp-logo-framed.webp" type="image/webp" />
+                <img
+                  src="assets/lp-logo-framed.png"
+                  alt="Luxury Problems — A New Musical"
+                  class="work__logo"
+                  width="768"
+                  height="512"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </a>
             <span class="visually-hidden">Luxury Problems</span>
           </h2>
@@ -111,7 +152,7 @@
             Twenty original songs. A completed 29-hour reading at CAM Studios, February 2026. Cast concept album in production. Off-Broadway workshop targeted for fall 2026.
           </p>
           <p class="work__link">
-            <a href="https://luxuryproblemsmusical.com" rel="noopener">luxuryproblemsmusical.com &rarr;</a>
+            <a href="https://www.luxuryproblemsmusical.com" rel="noopener">luxuryproblemsmusical.com &rarr;</a>
           </p>
         </div>
       </section>
@@ -137,7 +178,7 @@
             Tuner Music is the commercial music practice within Tuner Entertainment &mdash; original composition, scoring, and music production for brands, artists, and content.
           </p>
           <p class="music__reel">
-            <a href="mailto:charley@tunerentertainment.com?subject=Music">charley@tunerentertainment.com &rarr;</a>
+            <a href="mailto:charley@tunerentertainment.com?subject=Music">charley@<wbr />tunerentertainment.com &rarr;</a>
           </p>
         </div>
       </section>

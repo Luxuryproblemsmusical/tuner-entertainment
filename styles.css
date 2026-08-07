@@ -558,6 +558,21 @@ em { font-style: italic; }
   padding-bottom: 2px;
 }
 
+/* the spaced-out email is one long unbreakable word — a <wbr> after the @
+   gives it a clean break point on phones, and slightly tighter type keeps
+   the domain + arrow together on the second line; below 340px allow
+   char-level breaking rather than widening the page */
+@media (max-width: 520px) {
+  .section--music p.music__reel {
+    font-size: 0.9375rem;
+    letter-spacing: 0.14em;
+  }
+}
+
+@media (max-width: 340px) {
+  .music__reel a { overflow-wrap: anywhere; }
+}
+
 .music__reel a:hover {
   color: var(--red);
   border-bottom-color: var(--red);
@@ -650,9 +665,22 @@ em { font-style: italic; }
   .work__credit dd { font-size: 1.125rem; }
 }
 
-@media (max-width: 420px) {
-  .site-nav__list { gap: 0.65rem; }
-  .site-nav__list a { font-size: 0.625rem; letter-spacing: 0.14em; }
+/* Below ~520px a single nav row can't fit legibly (it used to force the
+   whole page to zoom out) — stack brand over links instead. */
+@media (max-width: 520px) {
+  :root { --nav-h: 88px; }
+
+  .site-nav {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.55rem;
+  }
+
+  .site-nav__list { gap: 1.1rem; }
+
+  /* the nowrap wordmark's 2.5rem floor is wider than a phone screen —
+     let it scale down so the page never zooms out */
+  .tuner-mark--lg { font-size: clamp(1.75rem, 8.5vw, 2.5rem); }
 }
 
 ::selection {
